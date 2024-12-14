@@ -1,0 +1,359 @@
+@import url("https://use.typekit.net/plh1run.css");
+
+/* Global Styles */
+body {
+  margin: 2vh;
+  background-color: #1A1A1A;
+  color: #5FAF5F;
+  font-family: "pf-videotext", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Form and Button Styling */
+input,
+button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  padding: 10px;
+  border: 2px solid #5FAF5F;
+  border-radius: 5px;
+  background-color: #1A1A1A;
+  color: #5FAF5F;
+  text-align: center;
+  box-shadow: 0 0 10px #5FAF5F;
+  outline: none;
+  text-transform: uppercase;
+  font-family: bryant-web, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+input::placeholder {
+  color: #888888;
+}
+
+input:focus {
+  box-shadow: 0 0 20px #5FAF5F;
+}
+
+button {
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #C8E6C9;
+  transform: scale(1.2);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Hidden Sections */
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/* Main Container */
+#mainContainer {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 30vh;
+  text-align: center;
+}
+
+/* Loading Overlay */
+#loadingOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1A1A1A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  /* Start with opacity 0 for fade-in effect */
+  transition: opacity 1s ease;
+  /* Fade effect */
+}
+
+.loadingText {
+  color: white;
+  font-size: 3vh;
+  font-family: brevier, sans-serif;
+  font-weight: 700;
+}
+
+/* Header */
+h1 {
+  font-size: 10vh;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px #5FAF5F, 0 0 10px #5FAF5F, 0 0 20px #5FAF5F;
+}
+
+h2 {
+  font-size: 3vh;
+  text-shadow: 0 0 5px #5FAF5F, 0 0 10px #5FAF5F;
+  text-align: center;
+  font-family: brevier, sans-serif;
+  font-weight: 700;
+}
+
+/* Form Styling */
+#introSection,
+#userInfoForm,
+#questionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  height: 10vh;
+}
+
+/* Question Container */
+#questionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  /* Fade effect */
+}
+
+/* Chart Styling */
+#chartContainer {
+  margin-top: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+  text-align: left;
+}
+
+/* Group Row Styling */
+.group-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 4vh;
+}
+
+.line-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  /* Space between bar and percentage */
+}
+
+.group-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-shadow: 0 0 5px #5FAF5F, 0 0 10px #5FAF5F;
+}
+
+/* Animate the graph bars */
+@keyframes growBar {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: var(--target-width);
+  }
+}
+
+.group-line {
+  height: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 20, 147, 0.8), 0 0 20px rgba(255, 20, 147, 0.6);
+  animation: growBar 2s ease-out forwards;
+}
+
+.group-line {
+  --target-width: 0%;
+}
+
+.group-line:hover {
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.9), 0 0 30px rgba(255, 20, 147, 0.8);
+}
+
+.group-percentage {
+  font-weight: bold;
+  color: #5FAF5F;
+  margin-left: 10px;
+}
+
+.group-description {
+  font-style: italic;
+  color: #C8E6C9;
+  margin-top: 5px;
+  text-shadow: 0 0 5px #5FAF5F;
+  font-size: 1.5vh;
+  font-family: brevier, sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.group-row {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+}
+
+/* Background Effects */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 128, 0, 0.1) 0%, #1A1A1A) 80%;
+  animation: flicker 1.5s infinite, noise 0.5s infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes flicker {
+
+  0%,
+  100% {
+    opacity: 0.9;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Noise Effect */
+@keyframes noise {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(1px, -1px);
+  }
+}
+
+/* Option Button Styling */
+.optionButton {
+  margin: 40px;
+  text-transform: uppercase;
+}
+
+/* Spinner Animation */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 8px #5faf5f double;
+  border-left-style: solid;
+  border-radius: 50%;
+  animation: spinner-aib1d7 0.9s infinite linear;
+  display: block;
+  margin: 30px;
+}
+
+@keyframes spinner-aib1d7 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Paragraph Styling */
+p {
+  margin-left: 4vh;
+  margin-right: 4vh;
+  text-align: justify;
+}
+
+/* Link Styling */
+#documentation,
+#home,
+#resources,
+#ai {
+  position: fixed;
+  font-family: "pf-videotext", sans-serif;
+  color: #C8E6C9;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  text-shadow: 0 0 5px #5FAF5F, 0 0 10px #5FAF5F;
+  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#documentation:hover,
+#home:hover,
+#resources:hover,
+#ai:hover {
+  color: white;
+  text-shadow: 0 0 10px #5FAF5F, 0 0 20px #5FAF5F;
+  transform: scale(1.1);
+}
+
+#documentation:active,
+#home:active,
+#resources:active,
+#ai:active {
+  transform: scale(0.95);
+}
+
+#documentation {
+  top: 10px;
+  left: 10px;
+}
+
+#home {
+  top: 10px;
+  right: 10px;
+}
+
+#resources {
+  bottom: 10px;
+  left: 10px;
+}
+
+#ai {
+  bottom: 10px;
+  right: 10px;
+}
+
+#resourcesPage,
+#reflection {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+#resourcesPage a {
+  color: rgb(189, 96, 189);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#resourcesPage a:hover {
+  color: darkviolet;
+  text-decoration: underline;
+}

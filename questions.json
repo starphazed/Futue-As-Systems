@@ -1,0 +1,122 @@
+[
+  {
+    "question": "Should the government have access to your financial information?",
+    "options": ["Yes", "No"],
+    "key": "financial_government",
+    "impact": "government"
+  },
+  {
+    "question": "Should corporations have access to your financial information?",
+    "options": ["Yes", "No"],
+    "key": "financial_corporations",
+    "impact": "corporations"
+  },
+  {
+    "question": "Should individuals have access to your financial information?",
+    "options": ["Yes", "No"],
+    "key": "financial_individuals",
+    "impact": "individuals"
+  },
+  {
+    "question": "Should the government have access to your health records?",
+    "options": ["Yes", "No"],
+    "key": "health_government",
+    "impact": "government"
+  },
+  {
+    "question": "Should corporations have access to your health records?",
+    "options": ["Yes", "No"],
+    "key": "health_corporations",
+    "impact": "corporations"
+  },
+  {
+    "question": "Should individuals have access to your health records?",
+    "options": ["Yes", "No"],
+    "key": "health_individuals",
+    "impact": "individuals"
+  },
+  {
+    "question": "Should the government have access to your personal browsing history?",
+    "options": ["Yes", "No"],
+    "key": "browsing_government",
+    "impact": "government"
+  },
+  {
+    "question": "Should corporations have access to your personal browsing history?",
+    "options": ["Yes", "No"],
+    "key": "browsing_corporations",
+    "impact": "corporations"
+  },
+  {
+    "question": "Should individuals have access to your personal browsing history?",
+    "options": ["Yes", "No"],
+    "key": "browsing_individuals",
+    "impact": "individuals"
+  },
+  {
+    "question": "Should biometric data (e.g., fingerprints, facial recognition) be publicly accessible?",
+    "options": ["Yes", "No"],
+    "key": "biometric",
+    "impact": "government"
+  },
+  {
+    "question": "Should corporations be allowed to sell your data to third parties?",
+    "options": ["Yes", "No"],
+    "key": "data_selling",
+    "impact": "corporations"
+  },
+  {
+    "question": "Should companies be allowed to use your data to train AI systems?",
+    "options": ["Yes", "No"],
+    "key": "ai_training",
+    "impact": "corporations"
+  },
+  {
+    "question": "Should law enforcement have access to all your data without a warrant?",
+    "options": ["Yes", "No"],
+    "key": "law_enforcement",
+    "impact": "government"
+  },
+  {
+    "question": "Should your personal data be stored indefinitely?",
+    "options": ["Yes", "No"],
+    "key": "data_storage",
+    "impact": "corporations"
+  },
+  {
+    "question": "Should individuals have the right to erase their data from systems entirely?",
+    "options": ["Yes", "No"],
+    "key": "data_erasure",
+    "impact": "individuals"
+  },
+  {
+    "question": "Should your private communications (e.g., messages, emails) be accessible to the government?",
+    "options": ["Yes", "No"],
+    "key": "communications_government",
+    "impact": "government"
+  },
+  {
+    "question": "Should your private communications (e.g., messages, emails) be accessible to corporations?",
+    "options": ["Yes", "No"],
+    "key": "communications_corporations",
+    "impact": "corporations"
+  },
+  {
+    "question": "Should your private communications (e.g., messages, emails) be accessible to individuals?",
+    "options": ["Yes", "No"],
+    "key": "communications_individuals",
+    "impact": "individuals"
+  },
+  {
+    "question": "Should law enforcement be allowed to track your location at all times?",
+    "options": ["Yes", "No"],
+    "key": "location_tracking",
+    "impact": "government"
+  },
+  {
+    "question": "Should corporations track your location for targeted advertising?",
+    "options": ["Yes", "No"],
+    "key": "location_advertising",
+    "impact": "corporations"
+  }
+]

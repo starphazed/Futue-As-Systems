@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Privacy Paradox</title>
+
+  <!-- Stylesheet and Script Links -->
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="scripts/shuffle.js" defer></script>
+  <script src="scripts/script.js" defer></script>
+
+</head>
+
+<body>
+  <!-- Main Container -->
+  <div id="mainContainer">
+    <h1 class="shuffle-text">The Privacy Paradox</h1>
+  </div>
+
+  <!-- Documentation and Concept Links -->
+  <a href="documentation.html" id="documentation">Documentation</a>
+  <a href="index.html" id="home">Home</a>
+  <a href="resources.html" id="resources">Resources</a>
+  <a href="ai.html" id="ai">World Generation</a>
+
+  <!-- User Information Form -->
+  <form id="userInfoForm">
+    <h2>Enter Your Details</h2>
+    <label for="userName">Name:</label>
+    <input type="text" id="userName" placeholder="Enter your name" required>
+    <label for="userAge">Age:</label>
+    <input type="text" id="userAge" placeholder="Enter your age" required>
+    <button type="button" onclick="startQuestionnaire()">Next</button>
+  </form>
+
+  <!-- Questionnaire Section -->
+  <div id="questionContainer" class="hidden">
+    <h2 id="currentQuestion"></h2>
+    <div id="optionsContainer"></div>
+  </div>
+
+  <!-- Narrative Response Section -->
+  <p id="response" class="hidden"></p>
+
+  <!-- Chart Section -->
+  <div id="chartContainer" class="hidden"></div>
+
+  <!-- Fullscreen Loading Overlay -->
+  <div id="loadingOverlay" class="hidden">
+    <div class="spinner"></div>
+    <div class="loadingText shuffle-text">Generating your world</div>
+  </div>
+
+</body>
+
+</html>
